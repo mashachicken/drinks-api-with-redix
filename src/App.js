@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Posts from './Posts'
+import Drinks from './Drinks'
+import DrinksForm from './DrinksForm'
+import { createStore, applyMiddleware} from 'redux';
 
+const store = createStore (() => [], {}, applyMiddleware());
 class App extends Component {
   render() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <Posts />
-    </div>
-  );
-}
+    return (
+
+      <div className="App">
+      <DrinksForm/>
+      <hr/>
+      <Drinks />
+      </div>
+
+    );
+  }
 }
 
 export default App

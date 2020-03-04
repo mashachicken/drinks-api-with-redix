@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Posts extends Component {
+class Drinks extends Component {
  constructor(props) {
    super(props);
    this.state = {
@@ -15,7 +15,6 @@ class Posts extends Component {
  }
 
  render() {
-   console.log(this.state.drinks)
    const drinkItems = this.state.drinks &&  this.state.drinks.map(drink => (
      <div key={drink.idDrink}>
      <h3>{drink.strDrink} </h3>
@@ -30,4 +29,4 @@ class Posts extends Component {
    )
  }
 }
-export default Posts
+export default Drinks
